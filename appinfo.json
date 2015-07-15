@@ -1,0 +1,26 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "majestic.mudkip@gmail.com",
+    "longName": "Maji de Watashi ni Koishinasai!",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/MIYAKO_01.png",
+                "name": "S01_MIYAKO01",
+                "type": "png-trans"
+            }
+        ]
+    },
+    "sdkVersion": "2",
+    "shortName": "Majikoi",
+    "uuid": "3e76273a-bcde-492a-bf36-87bccca7ccf7",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
