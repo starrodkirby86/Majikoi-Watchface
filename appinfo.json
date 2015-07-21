@@ -9,6 +9,11 @@
     "resources": {
         "media": [
             {
+                "file": "images/BG_01.png",
+                "name": "BG_01",
+                "type": "png"
+            },
+            {
                 "file": "images/MIYAKO_01.png",
                 "name": "S01_MIYAKO01",
                 "type": "png-trans"

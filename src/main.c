@@ -7,6 +7,7 @@
 */
 
 #include <pebble.h>
+#include "background.h"
 #include "watch_animation.h"
 #include "text_layer.h"
 
@@ -33,12 +34,10 @@ BitmapLayer *ly_black;
 * FUNCTIONS HERE
 */
 
-static void update_proc(Layer *layer, GContext *ctx) {
-  graphics_context_set_fill_color(ctx, GColorBlack);
-  graphics_fill_rect(ctx, layer_get_bounds(layer), 4, GCornersAll);
-}
-
-void main_window_load(void) {        
+void main_window_load(void) {     
+  
+  // Load background here (FOR NOW KILL ME)
+  load_background(my_window);
 
   // Create white/black images
   ch_white = gbitmap_create_with_resource(RESOURCE_ID_S01_MIYAKO01_WHITE);

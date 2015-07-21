@@ -4,6 +4,11 @@
 *    This pretty much helps us tell the time. WOW SO MODERN
 */
 
+/*
+* TODO:
+* >> Perfect the coordinates, I guess.
+*/
+
 // INCLUDE
 #include <pebble.h>
 
