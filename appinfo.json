@@ -9,14 +9,84 @@
     "resources": {
         "media": [
             {
-                "file": "images/BG_01.png",
-                "name": "BG_01",
+                "file": "images/ch_03_miyako01.png",
+                "name": "CH_03_MIYAKO01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/ch_06_shou01.png",
+                "name": "CH_06_SHOU01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/ch_08_moro01.png",
+                "name": "CH_08_MORO01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/ch_07_gaku01.png",
+                "name": "CH_07_GAKU01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/ch_05_chris01.png",
+                "name": "CH_05_CHRIS01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/ch_04_yukie01.png",
+                "name": "CH_04_YUKIE01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/ch_02_kazuko01.png",
+                "name": "CH_02_KAZUKO01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/ch_01_momo01.png",
+                "name": "CH_01_MOMO01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/BG_08.png",
+                "name": "BG_08",
                 "type": "png"
             },
             {
-                "file": "images/MIYAKO_01.png",
-                "name": "S01_MIYAKO01",
-                "type": "png-trans"
+                "file": "images/BG_07.png",
+                "name": "BG_07",
+                "type": "png"
+            },
+            {
+                "file": "images/BG_06.png",
+                "name": "BG_06",
+                "type": "png"
+            },
+            {
+                "file": "images/BG_05.png",
+                "name": "BG_05",
+                "type": "png"
+            },
+            {
+                "file": "images/BG_04.png",
+                "name": "BG_04",
+                "type": "png"
+            },
+            {
+                "file": "images/BG_03.png",
+                "name": "BG_03",
+                "type": "png"
+            },
+            {
+                "file": "images/BG_02.png",
+                "name": "BG_02",
+                "type": "png"
+            },
+            {
+                "file": "images/BG_01.png",
+                "name": "BG_01",
+                "type": "png"
             }
         ]
     },

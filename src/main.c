@@ -53,13 +53,16 @@ void main_window_unload(void) {
 }
 
 void handle_init(void) {
+  
   // Main window load
   my_window = window_create();
   main_window_load();
   window_stack_push(my_window, true);
   
+  
   // Interface load
   watch_interface_animation_go();
+  //ch_animation_go();
   
   // Clock load
   tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);

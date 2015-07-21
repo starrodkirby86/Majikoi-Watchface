@@ -13,6 +13,7 @@
 
 // INCLUDE
 #include <pebble.h>
+#include <random_bg.h>
 
 // DEFINE CONSTANTS
   
@@ -26,7 +27,7 @@ static BitmapLayer *ly_bg;
 void load_background(Window *window) {
   // Define boundaries and other formal housekeeping
   GRect bounds = layer_get_bounds(window_get_root_layer(window));
-  bg = gbitmap_create_with_resource(RESOURCE_ID_BG_01);
+  bg = gbitmap_create_with_resource(randomize_bg());
   
   // Create layer
   ly_bg = bitmap_layer_create(bounds);

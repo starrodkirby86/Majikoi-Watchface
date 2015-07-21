@@ -138,17 +138,21 @@ void watch_update(Layer *layer, GContext *ctx) {
 // LOADING/UNLOADING
 
 void load_watch_interface(Window *window) {
+  
   // This actually loads the drawing into existance.
   // Loading main circle
   GRect grect_watch_base = GRect(MAIN_CIRCLE_X+MAIN_CIRCLE_W/2, MAIN_CIRCLE_Y+MAIN_CIRCLE_H/2, 0, 0);
   ly_watch = layer_create(grect_watch_base);
   layer_set_update_proc(ly_watch, watch_update);
   layer_add_child(window_get_root_layer(window), ly_watch);
+  
   // Loading sub circle
   grect_watch_base = GRect(SUB_CIRCLE_X+SUB_CIRCLE_W/2, SUB_CIRCLE_Y+SUB_CIRCLE_H/2, 0, 0);
   ly_sub_watch = layer_create(grect_watch_base);
   layer_set_update_proc(ly_sub_watch, watch_update);
   layer_add_child(window_get_root_layer(window), ly_sub_watch);
+  
+  
   // Loading ko circle
   grect_watch_base = GRect(KO_CIRCLE_X+KO_CIRCLE_W/2, KO_CIRCLE_Y+KO_CIRCLE_H/2, 0, 0);
   ly_ko_watch = layer_create(grect_watch_base);
