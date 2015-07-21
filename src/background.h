@@ -6,7 +6,7 @@
 
 /* 
 * TODO:
-* >> The entire thing, lol
+* >> Add random background update
 *
 */
 
