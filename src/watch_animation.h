@@ -1,12 +1,14 @@
 /*
 *    Watch Animation
-*    This is specifically to create the watch portion
+*    This is specifically to create the circular portions
 *    of the watchface.
 */
 
 /*
 * TODO:
 * >> Organize and make the code PRETTY.
+* >> There's like three circles and tons of functions that do the same thing but have subtle name changes...
+* >> >> Can't we do something about that?
 */
 
 // INCLUDE
@@ -27,11 +29,19 @@
 #define SUB_CIRCLE_W  42
 #define SUB_CIRCLE_H  42
   
+#define KO_CIRCLE_X   4
+#define KO_CIRCLE_Y   149
+#define KO_CIRCLE_W   16
+#define KO_CIRCLE_H   16
+  
 // INITIAL DECLARATIONS
 static Layer *ly_watch;
 static Layer *ly_sub_watch;
+static Layer *ly_ko_watch;
+
 static PropertyAnimation *ani_circles;
 static PropertyAnimation *ani_sub_circles;
+static PropertyAnimation *ani_ko_circles;
   
 // FUNCTIONS
 
@@ -50,6 +60,14 @@ void sub_watch_interface_animation_started(Animation *animation, void *data) {
 
 void sub_watch_interface_animation_stopped(Animation *animation, bool finished, void *data) {
   property_animation_destroy(ani_sub_circles);
+}
+
+void ko_watch_interface_animation_started(Animation *animation, void *data) {
+  
+}
+
+void ko_watch_interface_animation_stopped(Animation *animation, bool finished, void *data) {
+  property_animation_destroy(ani_ko_circles);
 }
 
 void watch_interface_animation_go(void) {
@@ -87,6 +105,22 @@ void watch_interface_animation_go(void) {
   animation_set_curve((Animation*) ani_sub_circles, AnimationCurveEaseInOut);
   animation_schedule((Animation*) ani_sub_circles);  
   
+  // Now this one is for the kawaii circle.
+  from_frame = layer_get_frame(ly_ko_watch);
+  to_frame = GRect(KO_CIRCLE_X, KO_CIRCLE_Y, KO_CIRCLE_W, KO_CIRCLE_H);
+  
+  // The command itself.
+  ani_ko_circles = property_animation_create_layer_frame(ly_ko_watch, &from_frame, &to_frame);
+  
+  animation_set_handlers((Animation*) ani_ko_circles, (AnimationHandlers) {
+    .started = (AnimationStartedHandler) ko_watch_interface_animation_started,
+    .stopped = (AnimationStoppedHandler) ko_watch_interface_animation_stopped,
+  }, NULL);
+  
+  animation_set_duration((Animation*) ani_ko_circles, WATCH_ANIM_DURATION);
+  animation_set_curve((Animation*) ani_ko_circles, AnimationCurveEaseInOut);
+  animation_schedule((Animation*) ani_ko_circles);    
+  
 }
 
 // OTHER FUNCTIONS I GUESS LOL
@@ -115,9 +149,15 @@ void load_watch_interface(Window *window) {
   ly_sub_watch = layer_create(grect_watch_base);
   layer_set_update_proc(ly_sub_watch, watch_update);
   layer_add_child(window_get_root_layer(window), ly_sub_watch);
+  // Loading ko circle
+  grect_watch_base = GRect(KO_CIRCLE_X+KO_CIRCLE_W/2, KO_CIRCLE_Y+KO_CIRCLE_H/2, 0, 0);
+  ly_ko_watch = layer_create(grect_watch_base);
+  layer_set_update_proc(ly_ko_watch, watch_update);
+  layer_add_child(window_get_root_layer(window), ly_ko_watch);
 }
 
 void unload_watch_interface(void) {
   layer_destroy(ly_watch);
   layer_destroy(ly_sub_watch);
+  layer_destroy(ly_ko_watch);
 }

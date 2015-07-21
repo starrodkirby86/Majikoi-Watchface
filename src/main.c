@@ -8,6 +8,7 @@
 
 #include <pebble.h>
 #include "watch_animation.h"
+#include "text_layer.h"
 
     
 /*
@@ -23,7 +24,6 @@
 */
     
 Window *my_window;
-TextLayer *text_layer;
 GBitmap *ch_white;
 GBitmap *ch_black;
 BitmapLayer *ly_white;
@@ -72,6 +72,10 @@ void main_window_load(void) {
   
   // Include watch interface now...
   load_watch_interface(my_window);
+  
+  // Timer stuff
+  load_text_clock(my_window);
+  text_update_proc_time();
 }
 
 void main_window_unload(void) {
@@ -83,17 +87,21 @@ void main_window_unload(void) {
 }
 
 void handle_init(void) {
+  // Main window load
   my_window = window_create();
   main_window_load();
   window_stack_push(my_window, true);
+  
+  // Interface load
   watch_interface_animation_go();
+  
+  // Clock load
+  tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
 }
 
-void handle_deinit(void) {
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "run handle deinit");    
+void handle_deinit(void) {  
   main_window_unload();
-  window_destroy(my_window);
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "dead");    
+  window_destroy(my_window);  
 }
 
 int main(void) {
