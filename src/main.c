@@ -1,8 +1,16 @@
 /*
 * Maji de Watashi ni Koishinasai! Watchface
+* Version 0.5
 *
 * Utilizes sprites from Majikoi to make
 * a fun and cute watchface for the Pebble.
+*
+*/
+
+/* TODO:
+* >> add day of the week
+* >> more characters
+* >> randomizer updating
 *
 */
 
