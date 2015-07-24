@@ -55,6 +55,11 @@ void text_update_proc_time(void) {
 // SOME TICK TOCK STUFF
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
   text_update_proc_time();
+  /*if(tick_time->tm_min == 0)
+  {
+    w_update_proc();
+    ch_update_proc();
+  }*/
 }
 
 // loading/unloading

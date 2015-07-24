@@ -38,10 +38,13 @@ Window *my_window;
 * FUNCTIONS HERE
 */
 
+// SOME TICK TOCK STUFF
+
 void main_window_load(void) {     
   
   // Load background here
   load_background(my_window);
+  background_update_proc();
   
   // Load ch_sprite here
   load_ch_sprite(my_window);
@@ -49,7 +52,6 @@ void main_window_load(void) {
   // Include watch interface now...
   load_watch_interface(my_window);
   load_w(my_window);
-  w_update_proc();
   
   // Timer stuff
   load_text_clock(my_window);
@@ -75,7 +77,7 @@ void handle_init(void) {
   watch_interface_animation_go();
   //ch_animation_go();
   
-  // Clock load
+  // Load tick timers
   tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
 }
 

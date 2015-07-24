@@ -101,16 +101,16 @@ void ch_animation_go() {
   animation_schedule((Animation*) ani_bl);
 }
 
-  
-// LOAD/UNLOAD
-void load_ch_sprite(Window *window) {
-  
-  // Create white/black images
-  randomize_ch(&wh_id,&bl_id);
-  
-  ch_white = gbitmap_create_with_resource(wh_id);
-  ch_black = gbitmap_create_with_resource(bl_id);
-  
+void ch_update_proc(void) {
+    // Time structure
+    randomize_ch(&wh_id,&bl_id);
+    bitmap_layer_set_bitmap(ly_white, gbitmap_create_with_resource(wh_id));
+    bitmap_layer_set_compositing_mode(ly_white, GCompOpOr);
+    bitmap_layer_set_bitmap(ly_black, gbitmap_create_with_resource(bl_id));
+    bitmap_layer_set_compositing_mode(ly_black, GCompOpClear);    
+}
+
+void draw_ch_sprite(Window *window) {
   // G Shape delcarations
   Layer *window_layer = window_get_root_layer(window);
   bounds = layer_get_bounds(window_layer);    
@@ -131,7 +131,20 @@ void load_ch_sprite(Window *window) {
   ly_black = bitmap_layer_create(image_frame);
   bitmap_layer_set_bitmap(ly_black, ch_black);
   bitmap_layer_set_compositing_mode(ly_black, GCompOpClear);
-  layer_add_child(window_layer, bitmap_layer_get_layer(ly_black));  
+  layer_add_child(window_layer, bitmap_layer_get_layer(ly_black));   
+}
+
+  
+// LOAD/UNLOAD
+void load_ch_sprite(Window *window) {
+  
+  // Create white/black images
+  randomize_ch(&wh_id,&bl_id);
+  
+  ch_white = gbitmap_create_with_resource(wh_id);
+  ch_black = gbitmap_create_with_resource(bl_id);
+  
+  draw_ch_sprite(window);
 }
 
 void unload_ch_sprite(void) {

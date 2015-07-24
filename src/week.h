@@ -17,7 +17,7 @@
 
 // Initial Declarations
 GBitmap *w_day;
-static BitmapLayer *ly_w;
+BitmapLayer *ly_w;
   
 // Functions
 void w_update_proc(void) {
@@ -49,14 +49,10 @@ void w_update_proc(void) {
       w_day = gbitmap_create_with_resource(RESOURCE_ID_W_06_WHITE);
       break;
   }
-  
+  bitmap_layer_set_bitmap(ly_w,w_day);      
 }
   
   // Change the resource ID based off buffer_w
-
-static void w_tick_handler(struct tm *tick_time, TimeUnits units_changed) {
-  w_update_proc();
-}
   
 // Load/Unload
 void load_w(Window *window) {
