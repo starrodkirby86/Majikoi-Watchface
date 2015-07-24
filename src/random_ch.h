@@ -13,7 +13,7 @@
 #include <pebble.h>
 
 // CONSTANTS
-#define MAX_COUNT  8
+#define MAX_COUNT  11
 
 // INITIAL DECLARATIONS  
   
@@ -56,6 +56,18 @@
     case 7:
       *ch_white = RESOURCE_ID_CH_08_MORO01_WHITE;
       *ch_black = RESOURCE_ID_CH_08_MORO01_BLACK;
+      break;
+    case 8:
+      *ch_white = RESOURCE_ID_CH_09_TADA01_WHITE;
+      *ch_black = RESOURCE_ID_CH_09_TADA01_BLACK;
+      break;
+    case 9:
+      *ch_white = RESOURCE_ID_CH_10_TOUMA01_WHITE;
+      *ch_black = RESOURCE_ID_CH_10_TOUMA01_BLACK;
+      break;
+    case 10:
+      *ch_white = RESOURCE_ID_CH_11_KOKORO01_WHITE;
+      *ch_black = RESOURCE_ID_CH_11_KOKORO01_BLACK;
       break;
     default:
       *ch_white = RESOURCE_ID_CH_01_MOMO01_WHITE;

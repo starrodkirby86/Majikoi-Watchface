@@ -19,6 +19,7 @@
 #include "ch_sprite.h"
 #include "watch_animation.h"
 #include "text_layer.h"
+#include "week.h"
 
     
 /*
@@ -47,6 +48,8 @@ void main_window_load(void) {
   
   // Include watch interface now...
   load_watch_interface(my_window);
+  load_w(my_window);
+  w_update_proc();
   
   // Timer stuff
   load_text_clock(my_window);

@@ -3,11 +3,67 @@
     "capabilities": [
         ""
     ],
-    "companyName": "majestic.mudkip@gmail.com",
-    "longName": "Maji de Watashi ni Koishinasai!",
+    "companyName": "Starrodkirby86",
+    "longName": "Maji de Watashi ni Koishinasai! Watchface",
     "projectType": "native",
     "resources": {
         "media": [
+            {
+                "file": "images/ico.png",
+                "menuIcon": true,
+                "name": "icon",
+                "type": "png"
+            },
+            {
+                "file": "images/ch_13_kokoro01.png",
+                "name": "CH_11_KOKORO01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/ch_12_touma01.png",
+                "name": "CH_10_TOUMA01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/ch_11_tada01.png",
+                "name": "CH_09_TADA01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/sat.png",
+                "name": "W_06",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/fri.png",
+                "name": "W_05",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/weds.png",
+                "name": "W_03",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/tues.png",
+                "name": "W_02",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/mon.png",
+                "name": "W_01",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/sun.png",
+                "name": "W_00",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/thurs.png",
+                "name": "W_04",
+                "type": "png-trans"
+            },
             {
                 "file": "images/ch_03_miyako01.png",
                 "name": "CH_03_MIYAKO01",
@@ -50,31 +106,16 @@
             },
             {
                 "file": "images/BG_08.png",
-                "name": "BG_08",
-                "type": "png"
-            },
-            {
-                "file": "images/BG_07.png",
-                "name": "BG_07",
-                "type": "png"
-            },
-            {
-                "file": "images/BG_06.png",
-                "name": "BG_06",
-                "type": "png"
-            },
-            {
-                "file": "images/BG_05.png",
                 "name": "BG_05",
                 "type": "png"
             },
             {
-                "file": "images/BG_04.png",
+                "file": "images/BG_07.png",
                 "name": "BG_04",
                 "type": "png"
             },
             {
-                "file": "images/BG_03.png",
+                "file": "images/BG_04.png",
                 "name": "BG_03",
                 "type": "png"
             },
@@ -91,10 +132,10 @@
         ]
     },
     "sdkVersion": "2",
-    "shortName": "Majikoi",
+    "shortName": "Majikoi Watchface",
     "uuid": "3e76273a-bcde-492a-bf36-87bccca7ccf7",
     "versionCode": 1,
-    "versionLabel": "1.0",
+    "versionLabel": "0.8",
     "watchapp": {
         "watchface": true
     }

@@ -13,7 +13,7 @@
 #include <pebble.h>
 
 // CONSTANTS
-#define MAX_BG_COUNT  8
+#define MAX_BG_COUNT  5
 
 // INITIAL DECLARATIONS  
   
@@ -36,13 +36,7 @@ uint32_t randomize_bg(void) {
     case 3:
       return RESOURCE_ID_BG_04;
     case 4:
-      return RESOURCE_ID_BG_05;
-    case 5:
-      return RESOURCE_ID_BG_06;
-    case 6:
-      return RESOURCE_ID_BG_07;
-    case 7:
-      return RESOURCE_ID_BG_08;    
+      return RESOURCE_ID_BG_05;  
     default:
       return RESOURCE_ID_BG_01;
   }

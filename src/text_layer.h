@@ -13,10 +13,10 @@
 #include <pebble.h>
 
 // DEFINE CONSTANTS AND STUFF 
-#define TEXT_BOUND_X_H 0
+#define TEXT_BOUND_X_H 2
 #define TEXT_BOUND_Y_H 105
-#define TEXT_BOUND_X_M 19
-#define TEXT_BOUND_Y_M 124
+#define TEXT_BOUND_X_M 20
+#define TEXT_BOUND_Y_M 123
 #define TEXT_BOUND_W   42
 #define TEXT_BOUND_H   42
 
