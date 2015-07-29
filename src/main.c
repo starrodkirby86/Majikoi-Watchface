@@ -1,6 +1,6 @@
 /*
 * Maji de Watashi ni Koishinasai! Watchface
-* Version 0.5
+* Version 0.9
 *
 * Utilizes sprites from Majikoi to make
 * a fun and cute watchface for the Pebble.
@@ -8,9 +8,7 @@
 */
 
 /* TODO:
-* >> add day of the week
-* >> more characters
-* >> randomizer updating
+* >> character updating
 *
 */
 
@@ -45,7 +43,7 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
   {
     w_update_proc();
     background_update_proc();
-    ch_update_proc();
+    //ch_update_proc(my_window);
   }
 }
 
