@@ -4,10 +4,15 @@
         ""
     ],
     "companyName": "Starrodkirby86",
-    "longName": "Maji de Watashi ni Koishinasai! Watchface",
+    "longName": "Maji de Watashi ni Koishinasai! W",
     "projectType": "native",
     "resources": {
         "media": [
+            {
+                "file": "images/BG_06.png",
+                "name": "BG_05",
+                "type": "png"
+            },
             {
                 "file": "images/ico.png",
                 "menuIcon": true,
@@ -106,11 +111,6 @@
             },
             {
                 "file": "images/BG_08.png",
-                "name": "BG_05",
-                "type": "png"
-            },
-            {
-                "file": "images/BG_07.png",
                 "name": "BG_04",
                 "type": "png"
             },
@@ -132,10 +132,10 @@
         ]
     },
     "sdkVersion": "2",
-    "shortName": "Majikoi Watchface",
+    "shortName": "Majikoi! W",
     "uuid": "3e76273a-bcde-492a-bf36-87bccca7ccf7",
     "versionCode": 1,
-    "versionLabel": "0.8",
+    "versionLabel": "0.9",
     "watchapp": {
         "watchface": true
     }

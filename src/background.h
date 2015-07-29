@@ -20,34 +20,22 @@
 // INITIAL DECLARATIONS 
 GBitmap *bg;
 static BitmapLayer *ly_bg;
-bool isNewBGHour;
   
 // FUNCTIONS
 void background_update_proc(void) {
-  /// Time structure
-  time_t temp = time(NULL);
-  struct tm *tick_time = localtime(&temp);
-  
-  if(tick_time->tm_min == 0 && !isNewBGHour)
-  {
-    bg = gbitmap_create_with_resource(randomize_bg());
-    isNewBGHour = 1;
-  }
-  else if(tick_time->tm_min > 0 && isNewBGHour)
-  {
-    isNewBGHour = 0;
-  }
+  bg = gbitmap_create_with_resource(randomize_bg());
+  bitmap_layer_set_bitmap(ly_bg,bg);
 }
   
 // LOADING/UNLOADING
 void load_background(Window *window) {
   // Define boundaries and other formal housekeeping
-  GRect bounds = layer_get_bounds(window_get_root_layer(window));
+  //GRect bounds = layer_get_bounds(window_get_root_layer(window));
   bg = gbitmap_create_with_resource(randomize_bg());
-  isNewBGHour = 0;
   
   // Create layer
-  ly_bg = bitmap_layer_create(bounds);
+  //ly_bg = bitmap_layer_create(bounds);
+  ly_bg = bitmap_layer_create(GRect(0,0,144,168));
   
   // Assign image resource into bitmap layer
   bitmap_layer_set_bitmap(ly_bg,bg);

@@ -34,9 +34,9 @@ uint32_t randomize_bg(void) {
     case 2:
       return RESOURCE_ID_BG_03;
     case 3:
-      return RESOURCE_ID_BG_04;
+      return RESOURCE_ID_BG_04;  
     case 4:
-      return RESOURCE_ID_BG_05;  
+      return RESOURCE_ID_BG_05;
     default:
       return RESOURCE_ID_BG_01;
   }

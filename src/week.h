@@ -58,13 +58,13 @@ void w_update_proc(void) {
 void load_w(Window *window) {
   // Define boundaries and other formal housekeeping
   GRect bounds = GRect(W_X, W_Y, W_SIZE, W_SIZE);
-  w_update_proc();
   
   // Create layer
   ly_w = bitmap_layer_create(bounds);
   
   // Assign image resource into bitmap layer
-  bitmap_layer_set_bitmap(ly_w,w_day);
+  w_update_proc();
+  //bitmap_layer_set_bitmap(ly_w,w_day);
   
   // Assign to the window
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(ly_w));
